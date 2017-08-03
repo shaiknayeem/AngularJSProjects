@@ -1,0 +1,110 @@
+    <div class="wrapper">
+     <div ng-if="showHeader" ng-include="'views/navbar.html'"></div>
+     <div class="content-wrapper">
+         <section class="content">
+     <div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+              <div class="alert alert-warning" ng-show="cartData.length == 0">
+                There are no products in your shopping cart.
+                <a href="#/restaurants" class="alert-link">Click here to return to the catalogue</a>
+              </div>
+           <div ng-hide="cartData.length == 0">
+            <div class="box-header with-border">
+              <h3 class="box-title">Your Cart</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+            <tbody>
+              <table class="table table-hover">
+                <tr>
+                <th>Quantity</th>
+                <th>Item</th>
+                <th class="text-right">Price</th>
+                <th class="text-right">Subtotal</th>
+                <th>Remove</th>
+                </tr>
+              <tr ng-repeat="item in cartData">
+                <td style="left:10px;">{{item.count}}</td>
+                <td class="text-left">{{item.name}}</td>
+                <td class="text-right">{{item.price | currency}}</td>
+                <td class="text-right">{{ (item.price * item.count) | currency}}</td>
+                <td><button ng-click="remove(item.id)" class="btn btn-sm btn-warning"><i class="fa fa-trash-o"></i></button></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3" class="text-right">Total:</td>
+                <td class="text-right">{{total() | currency}}</td>
+              </tr>
+              </tfoot>
+            </table>
+              <div class="text-center" style="margin-bottom:10px">
+                <a class="btn btn-primary" href="#/restaurants">Continue shopping</a>
+                <a class="btn btn-primary" href="#/placeOrder">Place order now</a>
+              </div>
+            </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+      </div>
+      </section>
+      </div>
+	  </div>
+      
+     <!--  <div class="modal fade bs-example-modal-lg" id="modal_default" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Check out now</h4>
+                  </div>
+                  <div class="modal-body">
+                        <form name="shippingForm" novalidate>
+                        <h3>Ship to</h3>
+                            <div class="form-group">
+                            <label>Name</label>
+                                <input class="form-control" style="border-radius:4px;" name="name" ng-model="data.shipping.name" required/>
+                                <span class="help-block" ng-show="shippingForm.name.$dirty && shippingForm.name.$error.required">Please enter a name</span>
+                            </div>
+                        <h3>Address</h3>
+                            <div class="form-group">
+                                <label>Street Address</label><input class="form-control" style="border-radius:4px;" name="street" ng-model="data.shipping.street" required/>
+                                <span class="help-block" ng-show="shippingForm.street.$dirty && shippingForm.street.$error.required">Please enter an address</span>
+                            </div>
+                            
+                            <div class="form-group">
+                            <label>City</label><input name="city" class="form-control" style="border-radius:4px;" ng-model="data.shipping.city" required />
+                            <span class="help-block" ng-show="shippingForm.city.$dirty && shippingForm.city.$error.required">Please enter a city</span>
+                            </div>
+                            
+                            <div class="form-group">
+                            <label>State</label><input name="state" class="form-control" style="border-radius:4px;" ng-model="data.shipping.state" required />
+                            <span class="help-block" ng-show="shippingForm.state.$dirty && shippingForm.state.$error.required">Please enter a state</span>
+                            </div>
+                            
+                            <div class="form-group">
+                            <label>Zip</label><input name="zip" class="form-control" style="border-radius:4px;" ng-model="data.shipping.zip" required />
+                            <span class="help-block" ng-show="shippingForm.zip.$dirty && shippingForm.zip.$error.required">Please enter a zip</span>
+                            </div>
+                            
+                            <div class="form-group">
+                            <label>Country</label><input name="country" class="form-control" style="border-radius:4px;" ng-model="data.shipping.country" required />
+                            <span class="help-block" ng-show="shippingForm.country.$dirty && shippingForm.country.$error.required">Please enter a zip</span>
+                            </div>
+                            
+                            <h3>Options</h3>
+                            <div class="check-box">
+                            <label><input name="giftwrap" type="checkbox" ng-model="data.shipping.giftwrap" />Gift wrap these items</label>
+                            </div>
+                        </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button data-dismiss="modal" class="btn btn-default pull-left" type="button">Cancel</button>
+                    <button class="btn btn-primary" type="button" ng-click="save()"  ng-disabled="shippingForm.$invalid">Complete order</button>
+                  </div>
+                </div>
+              </div>
+            </div> -->

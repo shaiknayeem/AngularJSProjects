@@ -1,0 +1,77 @@
+
+    <script>
+      $(function () {
+        $('input').iCheck({
+          checkboxClass: 'icheckbox_square-blue',
+          radioClass: 'iradio_square-blue',
+          increaseArea: '20%' // optional
+        });
+      });
+    </script>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AdminLTE 2 | Registration Page</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="CSS/AdminLTE.min.css">
+    <link rel="stylesheet" href="CSS/blue.css">
+    <link rel="stylesheet" href="CSS/iCheck-square/blue.css">
+    <script src="JS/jQuery-2.1.4.min.js"></script>
+        <script>
+      $(function () {
+	  alert()
+        $('input').iCheck({
+          checkboxClass: 'icheckbox_square-blue',
+          radioClass: 'iradio_square-blue',
+          increaseArea: '20%' // optional
+        });
+      });
+    </script>
+    <script src="JS/bootstrap.min.js"></script>
+    <script src="JS/icheck.min.js"></script>
+
+  </head>
+  <body class="hold-transition register-page">
+    <div class="login-box">
+      <div class="login-logo">
+        <a href="../../index2.html"><b>RUH</b>ungrie<img src="img/smile_2.png"></a>
+      </div><!-- /.login-logo -->
+      <div class="login-box-body">
+        <p class="login-box-msg">Sign in to start your session</p>
+        <form action="../../index2.html" name="form" method="post" novalidate>
+          <div class="form-group has-feedback">
+            <input type="email" name="email" ng-model="email" class="form-control" placeholder="Email">
+            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+          </div>
+          <div class="form-group has-feedback">
+            <input type="password" name="password" ng-model="password" class="form-control" placeholder="Password">
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+          </div>
+          <div class="row">
+            <div class="col-xs-8">
+              <div class="checkbox icheck">
+                <label>
+                  <input type="checkbox"> Remember Me
+                </label>
+              </div>
+            </div><!-- /.col -->
+            <div class="col-xs-4">
+              <a href="#/restaurants" class="btn btn-primary btn-block btn-flat" ng-disabled="form.$invalid">Sign In</a>
+            </div><!-- /.col -->
+          </div>
+        </form>
+
+        <a href="#">I forgot my password</a><br>
+        <a href="#/register" class="text-center">Register a new membership</a>
+
+      </div><!-- /.login-box-body -->
+    </div><!-- /.login-box -->
+    
+  </body>
+</html>

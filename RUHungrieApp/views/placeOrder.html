@@ -1,0 +1,53 @@
+<div class="wrapper">
+<div ng-include="'views/navbar.html'"></div>
+<div class="content-wrapper">
+        <section class="content">
+            <div class="row">
+          <h2 class="col-md-6 text-center">Check out now</h2></br>
+          <form name="shippingForm" novalidate>
+          <div class="well col-md-6" style="margin-left:1%;">
+          <h3>Ship to</h3>
+            <div class="form-group">
+              <label>Name</label>
+                <input class="form-control" style="border-radius:4px;" name="name" ng-model="data.shipping.name" required/>
+                <span class="help-block" ng-show="shippingForm.name.$dirty && shippingForm.name.$error.required">Please enter a name</span>
+            </div>
+          <h3>Address</h3>
+            <div class="form-group">
+                <label>Street Address</label><input class="form-control" style="border-radius:4px;" name="street" ng-model="data.shipping.street" required/>
+                <span class="help-block" ng-show="shippingForm.street.$dirty && shippingForm.street.$error.required">Please enter an address</span>
+            </div>
+            
+            <div class="form-group">
+              <label>City</label><input name="city" class="form-control" style="border-radius:4px;" ng-model="data.shipping.city" required />
+              <span class="help-block" ng-show="shippingForm.city.$dirty && shippingForm.city.$error.required">Please enter a city</span>
+            </div>
+            
+            <div class="form-group">
+              <label>State</label><input name="state" class="form-control" style="border-radius:4px;" ng-model="data.shipping.state" required />
+              <span class="help-block" ng-show="shippingForm.state.$dirty && shippingForm.state.$error.required">Please enter a state</span>
+            </div>
+            
+            <div class="form-group">
+              <label>Zip</label><input name="zip" class="form-control" style="border-radius:4px;" ng-model="data.shipping.zip" required />
+              <span class="help-block" ng-show="shippingForm.zip.$dirty && shippingForm.zip.$error.required">Please enter a zip</span>
+            </div>
+            
+            <div class="form-group">
+              <label>Country</label><input name="country" class="form-control" style="border-radius:4px;" ng-model="data.shipping.country" required />
+              <span class="help-block" ng-show="shippingForm.country.$dirty && shippingForm.country.$error.required">Please enter a zip</span>
+            </div>
+            
+            <h3>Options</h3>
+            <div class="check-box">
+              <label><input name="giftwrap" type="checkbox" ng-model="data.shipping.giftwrap" />Gift wrap these items</label>
+            </div>
+          <div class="text-center">
+            <a href="#/completeOrder" class="btn btn-primary" ng-disabled="shippingForm.$invalid">Complete order</a>
+          </div>
+        </div>
+        </form>
+        </div>
+        </section>
+ </div>
+ </div>

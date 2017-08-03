@@ -1,0 +1,67 @@
+<html ng-app="myApp">
+	<head>
+	<title>RUHungrie App</title>
+	<link rel="stylesheet" href="CSS/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="CSS/AdminLTE.min.css">
+    <link rel="stylesheet" href="CSS/iCheck-square/blue.css">
+	<link rel="stylesheet" href="CSS/_all-skins.min.css">
+  <link rel="stylesheet" href="CSS/rating.css"/>
+	<script src="JS/angular.min.js"></script>
+	<script src="JS/angular-route.min.js"></script>
+	<script src="JS/jQuery-2.1.4.min.js"></script>
+	<script src="JS/bootstrap.min.js"></script>
+	<script src="JS/icheck.min.js"></script>
+	
+	  <script src="JS/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="JS/morris.min.js"></script>
+    <script src="JS/jquery.sparkline.min.js"></script>
+    <script src="JS/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="JS/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="JS/jquery.knob.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+    <script src="JS/daterangepicker.js"></script>
+    <script src="JS/bootstrap-datepicker.js"></script>
+    <script src="JS/bootstrap3-wysihtml5.all.min.js"></script>
+    <script src="JS/jquery.slimscroll.min.js"></script>
+    <script src="JS/fastclick.min.js"></script>
+    <script src="JS/app.min.js"></script>
+    <script src="JS/dashboard.js"></script>
+    <script src="JS/demo.js"></script>
+	<script src="app.js"></script>
+        <script src="JS/dashboard2.js"></script>
+            <script src="JS/icheck.min.js"></script>
+	
+	<script src="app.js"></script>
+	<!--<script src="directives/fmRating.js"></script> -->
+  <script src="directives/fmDeliverTo.js"></script>
+	<script src="cart/cart.js"></script>
+	 <script>
+      $(function () {
+        $('input').iCheck({
+          checkboxClass: 'icheckbox_square-blue',
+          radioClass: 'iradio_square-blue',
+          increaseArea: '20%' // optional
+        });
+		
+      });
+	  $(document).ready(function(){
+		  	$(".sidebar-toggle").click(function(){
+          if($("body").hasClass("sidebar-collapse")){
+          $("body").removeClass("sidebar-collapse");
+          }
+          else{
+             $("body").addClass("sidebar-collapse");
+          }
+        })
+	  })
+    </script>
+	</head>
+	<body class="skin-blue sidebar-collapse sidebar-mini" style="background:#d2d6de;">
+	<div ng-view>
+		</div>
+	</body>
+</html>
+	

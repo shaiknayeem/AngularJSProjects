@@ -1,0 +1,66 @@
+     <div class="wrapper">       
+       <div ng-if="showHeader" ng-include src="'views/navbar.html'"></div>
+       <div class="content-wrapper">
+       <div class="row">
+         <section class="content">
+          <div class="col-md-6">
+          <div class="box">
+            <div class="box-header with-border">
+                  <h3 class="pull-left"><b>{{items[restaurant].name}}</b> Menu Items</h3>
+                  <h4 class="pull-right">{{items[restaurant].location}}</h4>
+                </div>
+                 <div class="box-body">
+                  <table class="table table-bordered">
+                      <tr>
+                        <th style="width:50%;">Item</th>
+                        <th>Price</th>
+                        <th>Cart</th>
+                      </tr>
+                        <tr ng-repeat="item in items[restaurant].menuItems">
+                          <td>
+                         {{item.name}}
+                          </td>
+                          <td>
+                            ${{item.price}}
+                          </td>
+                          <td>
+                            <a href="#" class="btn btn-primary" id="popup" ng-click="addProductToCart(item)">Add</a>
+                            </td>
+                        </tr>
+                  </table>
+                </div><!-- /.box-body -->
+                </div>
+            </div>
+            </div>
+            </section>
+            </div>
+            
+            <div id="dvData">
+            <ul>
+                <li>jQuery</li>
+                <li>JavaScript</li>
+                <li>Dojo</li>
+                <li>Mootools</li>
+            </ul>
+          </div>
+            <!--
+            <div class="modal fade bs-example-modal-lg" id="modal_default" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Modal Default</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Are you sure you want to add the item {{items[restaurant].menuItems.name}}</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button data-dismiss="modal" class="btn btn-default pull-left" type="button">Cancel</button>
+                    <button class="btn btn-primary" type="button">Save</button>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            
+            </div>
+            

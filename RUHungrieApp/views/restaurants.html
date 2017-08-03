@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AdminLTE 2 | Registration Page</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="CSS/AdminLTE.min.css">
+    <link rel="stylesheet" href="CSS/blue.css">
+    <link rel="stylesheet" href="CSS/iCheck-square/blue.css">
+    <script src="JS/jQuery-2.1.4.min.js"></script>
+        <script>
+      $(function () {
+	  alert()
+        $('input').iCheck({
+          checkboxClass: 'icheckbox_square-blue',
+          radioClass: 'iradio_square-blue',
+          increaseArea: '20%' // optional
+        });
+      });
+    </script>
+    <script src="JS/bootstrap.min.js"></script>
+    <script src="JS/icheck.min.js"></script>
+
+  </head>
+  <body class="hold-transition register-page">
+ <div class="wrapper">
+      <div ng-if="showHeader" ng-include="'views/navbar.html'"></div>
+      <div class="content-wrapper">
+        <div class="row">
+      <section class="content">
+        <div class="tab-content">
+                  <!--Home tab -->
+                    <div class="tab-pane active" id="home">
+                    <div class="col-md-6">
+                      <div class="box">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Restaurants Table</h3>
+                            <h4 class="pull-right"></h4>
+                          </div>
+                          <div class="box-body">
+                            <table class="table table-bordered">
+                              <tr>
+                                <th style="width: 10px">#</th>
+                                <th>Name</th>
+                                <th>Rating</th>
+                                <th>Price</th>
+                              </tr>
+                              <tr ng-repeat="item in items">
+                                <td>{{item.sno}}</td>
+                                <td>
+                                <a href="#/menu/{{items.indexOf(item)}}">
+                                <img class="img-rounded pull-left" ng-src="img/restaurants/{{item.id}}.jpg">
+                                <b>{{item.name}}</b>
+                                </a>
+                                </td>
+                                <td>
+                                  <div hungrie-rating rating-value="item.rating" max="5" readonly="true"></div>
+                                </td>
+                                 <td>
+                                  <div hungrie-price rating-value="item.price" max="5" readonly="true"></div>
+                                </td>
+                              </tr>
+                            </table>
+                          </div><!-- /.box-body -->
+                          </div>
+                      </div>
+                    </div> <!-- /.Home tab-->
+                 <!-- How It Works tab -->
+                    
+              </div>
+          </section>
+          </div>
+      </div>
+      <div class="control-sidebar-bg"></div>
+    </div>
+    
+  </body>
+</html>
+
+    
+
+    
+    
