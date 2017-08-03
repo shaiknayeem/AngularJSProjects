@@ -1,0 +1,11 @@
+.thinborder {
+    border:1px solid #f5f;
+    width:206px;
+    height:60px;
+    background:black;
+}
+.numborder{
+    border: 1px solid #000;
+    width:150px;
+    height:140px;
+}
